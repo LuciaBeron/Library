@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5em;
+}
+
+#newBook {
+  text-transform: uppercase;
+  border: 2px solid #C7493A;
+  border-radius: 2px;
+  width: 100px;
+  color: #C7493A;
+  margin: auto;
+  background-color: #161616;
+}
+
+body {
+  background-color: #161616;
+  color: #C7493A;
+  font-family: 'Caros',sans-serif;
+}
+
+form input {
+  display:block;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+#form {
+  text-align: center;
+  margin: auto;
+  color:#C7493A;
+  border: 1px solid #C7493A;
+  width: 320px;
+  height:auto;
+  display: none;
+  z-index: 1;
+}
+
+input[type=checkbox] {
+  display: inline;
+}
+
+.library {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.library article {
+  border: 1px solid #C7493A;  
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.library h2 {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url(../fonts/cretype\ \ Caros\ Bold.otf);
+  font-style: normal;
+  font-weight:400;
+}
