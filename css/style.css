@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px solid white;
+  
 }
 
 h1 {
@@ -35,20 +35,71 @@ form input {
   margin: auto;
   color:#C7493A;
   border: 1px solid #C7493A;
+  background-color: #242323;
+  box-shadow: 1px 11px 14px 0px rgba(225,157,157,0.75);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 320px;
   height:auto;
-  display: none;
-  z-index: 1;
+  display: block;
+}
+
+#form.closed {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+#form.active {
+  z-index: 2;
+  animation: popup 0.3s ease-in-out;
+  backface-visibility: hidden;
+}
+
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+input {
+  background-color: #646262;
+  color: white;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+input::placeholder {
+  color: rgb(153, 147, 140);
 }
 
 input[type=checkbox] {
   display: inline;
 }
 
+input[type=button] {
+  display: inline-block;
+  border-style: none;
+}
+
 .library {
   display: flex;
   flex-wrap: wrap;
 }
+
+
 
 .library article {
   border: 1px solid #C7493A;  

@@ -8,9 +8,11 @@ const author = document.querySelector("#author");
 const pages = document.querySelector("#number");
 const read = document.querySelector("#read");
 const library = document.querySelector(".library");
+const body = document.querySelector("body");
 newBookBtn.addEventListener('click', showForm);
 closeBtn = document.querySelector("#close");
 btn.addEventListener('click',addBookToLibrary);
+closeBtn.addEventListener('click',showForm);
 
 class Book {
   constructor(author,title,pages,read) {
@@ -23,7 +25,7 @@ class Book {
 
 function addBookToLibrary() {
   const newAuthor = author.value;
-  const newName = name.value;
+  const newName = name.value; // ???????????????
   const newPage = pages.value;
   const isRead = read.checked;
 
@@ -31,6 +33,7 @@ function addBookToLibrary() {
   console.log(book);
   myLibrary.push(book);
   updateLibrary();
+  showForm();
 }
 
 
@@ -65,10 +68,7 @@ function updateLibrary() {
 }
 
 function showForm() {
-  form.style.display = "block";
+  form.classList.toggle("active");
+  form.classList.toggle("closed");
   
-}
-
-function closeForm() {
-  form.style.display = "block";
 }
