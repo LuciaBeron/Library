@@ -8,9 +8,10 @@
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Library</h1>
-
-      <button id="newBook">New book</button>
+    <header>
+      <img src="./icons/logo.png" alt="logo">
+      <button id="newBook">+</button>
+    </header> 
 
     <div class="library">
   
@@ -29,7 +30,7 @@
       </label>
 
       <label for="number">
-        <input placeholder="Number of pages" id="number" type="text">
+        <input placeholder="Number of pages" id="number" type="number" >
       </label>
 
       <label for="read"> Read
@@ -39,6 +40,11 @@
 
       <input id="btn" value="ADD BOOK" type="button">
       <input type="button" value="CLOSE" id="close">
+      
+      <p id="warning">
+        
+      </p>
+
 
     </form>
 

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  outline: none;
   
 }
 
@@ -8,20 +9,54 @@ h1 {
   font-size: 3.5em;
 }
 
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+img {
+
+  height: 200px;
+}
+
 #newBook {
   text-transform: uppercase;
   border: 2px solid #C7493A;
-  border-radius: 2px;
-  width: 100px;
-  color: #C7493A;
-  margin: auto;
-  background-color: #161616;
+  border-radius: 50%;
+  font-size: 45px;
+  width: 60px;
+  height:60px;
+  color: #161616;
+  background-color: #d63434;
+  transition: 0.4s ease-in-out;
+  
 }
+
+input[type=button] {
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.5s;
+}
+input[type=button]:hover {
+  background-color: #d63434;
+}
+
+#newBook:hover {
+  color: #d63434;
+  background-color: #161616;
+  cursor: pointer; 
+  box-shadow: 0px 0px 16px 6px #d63434;
+}
+
+
 
 body {
   background-color: #161616;
   color: #C7493A;
   font-family: 'Caros',sans-serif;
+
 }
 
 form input {
@@ -49,7 +84,7 @@ form input {
 #form.closed {
   opacity: 0;
   z-index: -1;
-  position: absolute;
+  position: absolute;  
 }
 
 #form.active {
@@ -57,6 +92,8 @@ form input {
   animation: popup 0.3s ease-in-out;
   backface-visibility: hidden;
 }
+
+
 
 
 @keyframes popup {
@@ -72,6 +109,7 @@ form input {
     opacity: 1;
   }
 }
+
 
 
 input {
@@ -97,6 +135,7 @@ input[type=button] {
 .library {
   display: flex;
   flex-wrap: wrap;
+  justify-content:flex-start;
 }
 
 
@@ -106,6 +145,11 @@ input[type=button] {
   border-radius: 6px;
   padding: 10px;
   margin: 10px;
+  height: 300px;
+  width: 300px;
+  font-size: 25px;
+  animation: popup 0.3s ease-in-out;
+  overflow:hidden;
 }
 
 .library h2 {
@@ -118,3 +162,15 @@ input[type=button] {
   font-style: normal;
   font-weight:400;
 }
+
+
+#warning {
+  color: #C7493A;
+}
+
+
+#warning li {
+  list-style-image: url("./icons/warning-sign.png");
+}
+
+
