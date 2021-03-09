@@ -111,6 +111,12 @@ form input {
 }
 
 
+.red-check {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  transition: 0.3s;
+}
 
 input {
   background-color: #646262;
@@ -150,6 +156,7 @@ input[type=button] {
   font-size: 25px;
   animation: popup 0.3s ease-in-out;
   overflow:hidden;
+  position: relative;
 }
 
 .library h2 {
@@ -174,3 +181,20 @@ input[type=button] {
 }
 
 
+.remove {
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid #C7493A;
+  color: #646262;
+  top: 10px;
+  right: 15px;
+  position: absolute;
+  font-size:20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.remove:hover {
+  color: black;
+  background-color: #646262;
+}
