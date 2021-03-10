@@ -207,12 +207,14 @@ input[type=button] {
   }
 
   .library article {
-    width: 190px;
-    height: 190px;
-    font-size: 19px;
+    width: 46%;
+    height: 210px;
+    font-size: 22px;
     padding: 3px;
-    margin: 5px;
+    margin: 8px;
   }
+
+
 
   .remove {
     font-size: 13px;
@@ -235,5 +237,14 @@ input[type=button] {
     height:40px;
     
   }
+
+  .library article {
+    width: 100%;
+    height: 200px;
+    font-size: 20px;
+    padding: 3px;
+    margin: 5px;
+  }
+
   
 }
