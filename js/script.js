@@ -82,6 +82,9 @@ function updateLibrary() {
     book.appendChild(x);
     book.appendChild(h2);
     book.appendChild(list);
+    if (myLibrary[myLibrary.length-1] == myLibrary[i]) {
+      book.style.animation = "popup 0.3s ease-in-out";
+    }
     library.appendChild(book);
     console.log("ADDED BOOK: ",myLibrary[i].author);
   }

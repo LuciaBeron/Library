@@ -156,7 +156,6 @@ input[type=button] {
   height: 300px;
   width: 300px;
   font-size: 25px;
-  animation: popup 0.3s ease-in-out;
   overflow:hidden;
   position: relative;
 }
