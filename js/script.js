@@ -1,4 +1,13 @@
-let myLibrary = [];
+
+console.log(localStorage.getItem('library') == 0);
+if (localStorage.length == 0) {
+  var data = [];
+  localStorage.setItem('library',JSON.stringify(data));
+  console.log("array",localStorage.getItem('library'));
+}
+
+var myLibrary = JSON.parse(localStorage.getItem('library'));
+
 const list = document.querySelector(".list");
 const newBookBtn = document.querySelector("#newBook");
 const form = document.querySelector("#form");
@@ -14,6 +23,7 @@ closeBtn = document.querySelector("#close");
 btn.addEventListener('click',addBookToLibrary);
 closeBtn.addEventListener('click',showForm);
 const warning = document.querySelector("#warning");
+restore();
 
 class Book { // BOOK CLASS AND CONSTRUCTOR
   constructor(author,title,pages,read) {
@@ -39,6 +49,7 @@ function addBookToLibrary() {
 
   myLibrary.push(book);
   updateLibrary();
+  localStorage.setItem('library',JSON.stringify(myLibrary));
   showForm();
 }
 
@@ -166,6 +177,7 @@ library.addEventListener('click', function(e) {
         const title = container.querySelector("h2").textContent;
         if (headingOfList == title ) {
           myLibrary.splice(i,1);
+          localStorage.setItem('library',JSON.stringify(myLibrary));
           updateLibrary();
         }
     }        
@@ -173,3 +185,16 @@ library.addEventListener('click', function(e) {
 
 })
 
+
+function restore() {
+  library.style.animation = "popup 0.5s ease-out";
+  updateLibrary();
+
+}
+
+const allCheck = document.querySelectorAll('input[type=checkbox]');
+allCheck.addEventListener('change', function(){
+  for (let i = 0; i<allCheck.length; i++) {
+    
+  }
+})
