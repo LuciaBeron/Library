@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Pola Books</title>
     <link rel="icon" href="icons/icon.png">
     
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
@@ -21,23 +21,25 @@
     </div>
 
     <form action="" id="form" class="closed">
-      <h2>Add a new book:</h2>
-      <label for="author">
-        <input placeholder="Author" id="author" type="text">
-      </label>
+      <div id="fields">
+        <h2>Add a new book:</h2>
+        <label for="author">
+          <input placeholder="Author" id="author" type="text">
+        </label>
 
-      <label for="title">
-        <input placeholder="Title" id="title" type="text">
-      </label>
+        <label for="title">
+          <input placeholder="Title" id="title" type="text">
+        </label>
 
-      <label for="number">
-        <input placeholder="Number of pages" id="number" type="number" >
-      </label>
+        <label for="number">
+          <input placeholder="Number of pages" id="number" type="number" >
+        </label>
 
-      <label for="read"> Read
-        <input id="read" type="checkbox">
-      </label>
-      <br>
+        <label for="read"> Read
+          <input id="read" type="checkbox">
+        </label>
+        <br>
+      </div>      
 
       <input id="btn" value="ADD BOOK" type="button">
       <input type="button" value="CLOSE" id="close">

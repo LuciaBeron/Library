@@ -82,19 +82,30 @@ function updateLibrary() {
     book.appendChild(x);
     book.appendChild(h2);
     book.appendChild(list);
+
     if (myLibrary[myLibrary.length-1] == myLibrary[i]) {
       book.style.animation = "popup 0.3s ease-in-out";
     }
+
     library.appendChild(book);
     console.log("ADDED BOOK: ",myLibrary[i].author);
   }
 }
 
 function showForm() {
+  cleanInputs();
   form.classList.toggle("active");
   document.body.classList.toggle("blur");
   form.classList.toggle("closed");
   
+}
+
+function cleanInputs() {
+  const fields = document.querySelector("#fields");
+  const allInputs = fields.querySelectorAll("input");
+  for (let i = 0; i<allInputs.length; i++) {
+    allInputs[i].value = "";
+  }
 }
 
 
