@@ -225,4 +225,8 @@ input[type=button] {
   header {
     width: 100%;
   }
+
+  img {
+    height: 150px;
+  }
 }
