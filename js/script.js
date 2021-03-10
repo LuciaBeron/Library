@@ -15,7 +15,7 @@ btn.addEventListener('click',addBookToLibrary);
 closeBtn.addEventListener('click',showForm);
 const warning = document.querySelector("#warning");
 
-class Book {
+class Book { // BOOK CLASS AND CONSTRUCTOR
   constructor(author,title,pages,read) {
     this.author = author;
     this.title = title,
